@@ -86,7 +86,7 @@ namespace Atomia.Store.AspNetMvc.Controllers
 
                 return Redirect(result.RedirectUrl);
             }
-
+            model = DependencyResolver.Current.GetService<CheckoutViewModel>();
             return View(model);
         }
 
